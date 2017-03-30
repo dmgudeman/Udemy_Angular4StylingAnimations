@@ -1,4 +1,17 @@
-
-:Host {
+:host {
+    display: block;
+    box-sizing:content-box;
+    border: 1px solid black;
+    padding: 20px;
+    /*margin-left: 1px;*/
     color: yellowgreen;
+}
+
+:host(.favorite) {
+    border: 1px solid red;
+}
+
+:host-context(.boring) {
+    border: 1px solid #ccc;
+    color: #ccc;
 }
