@@ -1,0 +1,5 @@
+<div class="box" (click)="divClicked = true"
+      [ngStyle] ="{backgroundColor: divClicked ? 'red' : 'blue'}" 
+      [class.boxy] = "divClicked"></div>
+
+      <!--can also use [ngClass]="{boxy: divClicked}"-->
