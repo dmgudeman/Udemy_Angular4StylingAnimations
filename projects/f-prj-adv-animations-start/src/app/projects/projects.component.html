@@ -39,9 +39,9 @@
     <app-project
       *ngFor="let prj of displayedProjects; let i = index"
       [project]="prj"
-       @itemState
-      (@itemState.done)="onItemAnimated($event, i)"
       [@markedState]="markedPrjIndex === i ? 'marked' : 'default'"
+      [@itemState]="createNew ? 'slidDown' : 'slidUp'"
+      (@itemState.done)="onItemAnimated($event, i)"
       [ngClass]="{inactive: prj.status === 'inactive'}"
       (statusUpdated)="onStatusUpdated($event, i)"
       (projectDeleted)="onProjectDeleted(i)"

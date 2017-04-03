@@ -48,7 +48,6 @@ export const itemStateTrigger = trigger('itemState', [
     ]))
   ]),
   transition(':leave', [
-
     animate('500ms ease-in', keyframes([
       style({
         opacity: 1,
@@ -63,6 +62,14 @@ export const itemStateTrigger = trigger('itemState', [
       })
 
     ]))
+  ]),
+  transition('slidUp => slidDown', [
+    style({
+      transform: 'translateY(-100%)'
+    }),
+    animate('300ms ease-out', style({
+      transform: 'translateY(0)'
+    }))
   ])
 ])
 export const slideStateTrigger = trigger('slideState', [
