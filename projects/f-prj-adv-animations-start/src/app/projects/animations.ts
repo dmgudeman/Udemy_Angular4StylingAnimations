@@ -105,4 +105,3 @@ export const slideStateTrigger = trigger('slideState', [
 
 ]);
 
-
