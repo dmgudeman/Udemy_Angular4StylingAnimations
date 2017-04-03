@@ -1,0 +1,12 @@
+<div 
+      id="div1"
+      class="box" (click)="divClicked = true"
+      [ngStyle] ="{backgroundColor: divClicked ? 'red' : 'blue'}" 
+      [class.boxy] = "divClicked"></div>
+
+      <!--can also use [ngClass]="{boxy: divClicked}"-->
+<hr>
+
+<div
+     id="div2">
+</div>

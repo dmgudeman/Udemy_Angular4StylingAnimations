@@ -1,0 +1,54 @@
+#div1 {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    transition: all 0.5s ease-out 0.3s;
+}
+/*.box {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}*/
+
+.boxy {
+    width: 200px;
+}
+
+
+#div2 {
+    background-color: green;
+    width: 200px;
+    height: 100px;
+    animation: moved 1s ease-out forwards;
+}
+
+@keyframes moved {
+    0% {
+        transform: translateX(0) scale(1) ;
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(300px) scale(1.2);
+    }
+    75% {
+        transform: translateX(400px) scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateX(400px) scale(1);
+        opacity: 0.1;
+    }
+}
