@@ -46,7 +46,10 @@ export class ProjectsComponent implements OnInit {
 
   onProjectCreated(project: Project) {
     this.createNew = false;
-    this.projects.unshift(project);
+    // so the two animations: slid up of the new-project form and the new project sliding in from the side
+    setTimeout(() => {
+       this.projects.unshift(project);
+    }, 300);
   }
 
   onItemAnimated(animationEvent: AnimationEvent, lastPrjId: number){

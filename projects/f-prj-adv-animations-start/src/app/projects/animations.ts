@@ -70,6 +70,14 @@ export const itemStateTrigger = trigger('itemState', [
     animate('300ms ease-out', style({
       transform: 'translateY(0)'
     }))
+  ]),
+  transition('slidDown => slidUp', [
+    style({
+      transform: 'translateY(0)'
+    }),
+    animate('300ms ease-out', style({
+      transform: 'translateY(-100%)'
+    }))
   ])
 ])
 export const slideStateTrigger = trigger('slideState', [
