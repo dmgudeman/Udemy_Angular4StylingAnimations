@@ -1,14 +1,28 @@
-import { keyframes, trigger, state, style, transition, animate } from '@angular/animations';
+import { keyframes, group, trigger, state, style, transition, animate } from '@angular/animations';
 
 export const buttonStateTrigger = trigger('buttonState', [
-  state('invalid', style({
-    
-  })),
-  transition('invalid => valid', [
-  
-    animate('200ms ease-out', style({
-      transform: 'scale(1.05)'
+    state('valid', style({
+        backgroundColor: 'green',
+        borderColor: 'green',
+        color: 'white'
+
     })),
-    animate(200)
-  ])
+    state('invalid', style({
+        backgroundColor: 'lightgreen',
+        borderColor: 'green',
+        color: 'green'
+    })),
+    transition('invalid => valid', [
+        group([
+            animate('100ms ease-out', style({
+                transform: 'scale(1.1)'
+            })),
+            animate(200, style({
+                backgroundColor: 'green'
+            }))
+        ]),
+        animate(200, style({
+            transform: 'scale(1)'
+        }))
+    ])
 ]);
