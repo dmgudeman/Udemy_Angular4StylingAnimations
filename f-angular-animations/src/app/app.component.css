@@ -1,0 +1,18 @@
+#simple {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: orange;
+    text-align: center;
+}
+#more-complex {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
